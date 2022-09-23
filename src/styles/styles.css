@@ -1,6 +1,12 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+
 .container {
 	height: 100vh;
 	display: grid;
+	text-align: center;
 	grid-template-columns: 1fr;
 	grid-template-rows: 0.4fr 2fr 0.4fr;
 	grid-auto-columns: 1fr;
@@ -14,7 +20,7 @@
 
 .header {
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-columns: 0.5fr 2fr 0.5fr;
 	grid-template-rows: 1fr;
 	gap: 0px 0px;
 	grid-auto-flow: row;
@@ -24,16 +30,25 @@
 
 .game-title {
 	grid-area: game-title;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	background-color: #e9adad;
 }
 
 .dark-mode {
 	grid-area: dark-mode;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	background-color: #9a7676;
 }
 
 .language-mode {
 	grid-area: language-mode;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	background-color: #facccc;
 }
 
@@ -50,6 +65,9 @@
 .made-love {
 	grid-area: made-love;
 	background-color: #eaae8e;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .game-area {
@@ -71,16 +89,25 @@
 .player-name {
 	grid-area: player-name;
 	background-color: rgb(230, 243, 115);
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .player-points {
 	grid-area: player-points;
 	background-color: rgb(165, 234, 86);
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .counter {
 	grid-area: counter;
 	background-color: rgb(182, 247, 209);
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .lives {
@@ -96,26 +123,41 @@
 .heart-1 {
 	grid-area: heart-1;
 	background-color: rgb(206, 17, 17);
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .heart-2 {
 	grid-area: heart-2;
 	background-color: rgb(238, 64, 64);
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .heart-3 {
 	grid-area: heart-3;
 	background-color: rgb(243, 115, 115);
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .card-play {
 	grid-area: card-play;
 	background-color: rgb(151, 182, 207);
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .messages {
 	grid-area: messages;
 	background-color: rgb(220, 187, 230);
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .buttons {
@@ -131,16 +173,25 @@
 .option-A {
 	grid-area: option-A;
 	background-color: rgb(174, 143, 165);
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .option-B {
 	grid-area: option-B;
 	background-color: rgb(221, 137, 154);
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .option-C {
 	grid-area: option-C;
 	background-color: rgb(197, 90, 168);
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .start-control {
@@ -156,4 +207,7 @@
 .button-control {
 	grid-area: button-control;
 	background-color: rgb(175, 214, 165);
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
