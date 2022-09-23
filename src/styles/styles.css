@@ -1,0 +1,159 @@
+.container {
+	height: 100vh;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 0.4fr 2fr 0.4fr;
+	grid-auto-columns: 1fr;
+	gap: 0px 0px;
+	grid-auto-flow: row;
+	grid-template-areas:
+		'header'
+		'game-area'
+		'footer';
+}
+
+.header {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr;
+	gap: 0px 0px;
+	grid-auto-flow: row;
+	grid-template-areas: 'language-mode game-title dark-mode';
+	grid-area: header;
+}
+
+.game-title {
+	grid-area: game-title;
+	background-color: #e9adad;
+}
+
+.dark-mode {
+	grid-area: dark-mode;
+	background-color: #9a7676;
+}
+
+.language-mode {
+	grid-area: language-mode;
+	background-color: #facccc;
+}
+
+.footer {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr;
+	gap: 0px 0px;
+	grid-auto-flow: row;
+	grid-template-areas: 'made-love';
+	grid-area: footer;
+}
+
+.made-love {
+	grid-area: made-love;
+	background-color: #eaae8e;
+}
+
+.game-area {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 0.3fr 0.3fr 2fr 0.2fr 0.2fr 0.2fr;
+	gap: 0px 0px;
+	grid-auto-flow: row;
+	grid-template-areas:
+		'player-name player-name player-name'
+		'player-points counter lives'
+		'card-play card-play card-play'
+		'messages messages messages'
+		'buttons buttons buttons'
+		'start-control start-control start-control';
+	grid-area: game-area;
+}
+
+.player-name {
+	grid-area: player-name;
+	background-color: rgb(230, 243, 115);
+}
+
+.player-points {
+	grid-area: player-points;
+	background-color: rgb(165, 234, 86);
+}
+
+.counter {
+	grid-area: counter;
+	background-color: rgb(182, 247, 209);
+}
+
+.lives {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr;
+	gap: 0px 0px;
+	grid-auto-flow: row;
+	grid-template-areas: 'heart-1 heart-2 heart-3';
+	grid-area: lives;
+}
+
+.heart-1 {
+	grid-area: heart-1;
+	background-color: rgb(206, 17, 17);
+}
+
+.heart-2 {
+	grid-area: heart-2;
+	background-color: rgb(238, 64, 64);
+}
+
+.heart-3 {
+	grid-area: heart-3;
+	background-color: rgb(243, 115, 115);
+}
+
+.card-play {
+	grid-area: card-play;
+	background-color: rgb(151, 182, 207);
+}
+
+.messages {
+	grid-area: messages;
+	background-color: rgb(220, 187, 230);
+}
+
+.buttons {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr;
+	gap: 0px 0px;
+	grid-auto-flow: row;
+	grid-template-areas: 'option-A option-B option-C';
+	grid-area: buttons;
+}
+
+.option-A {
+	grid-area: option-A;
+	background-color: rgb(174, 143, 165);
+}
+
+.option-B {
+	grid-area: option-B;
+	background-color: rgb(221, 137, 154);
+}
+
+.option-C {
+	grid-area: option-C;
+	background-color: rgb(197, 90, 168);
+}
+
+.start-control {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr;
+	gap: 0px 0px;
+	grid-auto-flow: row;
+	grid-template-areas: '. button-control .';
+	grid-area: start-control;
+}
+
+.button-control {
+	grid-area: button-control;
+	background-color: rgb(175, 214, 165);
+}
