@@ -1,4 +1,4 @@
-export const card = [
+export const cards = [
 	{
 		question: 'Que es JavaScript',
 		answers: {
@@ -6,7 +6,7 @@ export const card = [
 			answerB: 'Es un lenguaje de marcado',
 			answerC: 'Es un lenguaje de diseño',
 		},
-		correctAnswer: 'answerA',
+		correctAnswer: 'Es un lenguaje de programación',
 		response: 'false',
 	},
 	{
@@ -16,7 +16,7 @@ export const card = [
 			answerB: 'Es un framework del backend',
 			answerC: 'Es un lintern de JavaScript',
 		},
-		correctAnswer: 'answerB',
+		correctAnswer: 'Es un framework del backend',
 		response: 'false',
 	},
 	{
@@ -26,7 +26,7 @@ export const card = [
 			answerB: 'Es una libreria de autenticacion de usuarios',
 			answerC: 'Es una libreria de tipado solido de Javascript',
 		},
-		correctAnswer: 'answerC',
+		correctAnswer: 'Es una libreria de tipado solido de Javascript',
 		response: 'false',
 	},
 	{
@@ -36,7 +36,7 @@ export const card = [
 			answerB: 'Un valor almacenado en memoria que no cambia durante su ejecución',
 			answerC: 'Una libreria dinamica',
 		},
-		correctAnswer: 'answerB',
+		correctAnswer: 'Un valor almacenado en memoria que no cambia durante su ejecución',
 		response: 'false',
 	},
 ];

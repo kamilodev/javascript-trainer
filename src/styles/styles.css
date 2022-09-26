@@ -172,7 +172,6 @@ body {
 
 .option-A {
 	grid-area: option-A;
-	background-color: rgb(174, 143, 165);
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -180,7 +179,6 @@ body {
 
 .option-B {
 	grid-area: option-B;
-	background-color: rgb(221, 137, 154);
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -188,7 +186,6 @@ body {
 
 .option-C {
 	grid-area: option-C;
-	background-color: rgb(197, 90, 168);
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -206,8 +203,29 @@ body {
 
 .button-control {
 	grid-area: button-control;
-	background-color: rgb(175, 214, 165);
 	display: flex;
 	justify-content: center;
 	align-items: center;
+}
+
+.firstButton,
+.secondButton,
+.thirdButton {
+	cursor: pointer;
+	width: 90%;
+	height: 100%;
+	border: 0;
+	border-radius: 10px;
+}
+
+.startButton {
+	cursor: pointer;
+	width: 90%;
+	height: 100%;
+	border: 0;
+	border-radius: 10px;
+}
+
+.hideMe {
+	visibility: hidden;
 }
