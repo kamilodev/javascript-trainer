@@ -3,6 +3,7 @@ import './styles/styles.css';
 import { cards } from './models/card.model';
 import { shuffleCards } from './controllers/suffleCards.controller';
 import { disableButton, enableButton } from './controllers/controlButton.controller';
+import ReactSwitch from 'react-switch';
 
 class Form extends Component {
 	constructor(props) {
@@ -12,6 +13,7 @@ class Form extends Component {
 			score: 0,
 			buttons: true,
 			auxCards: [],
+			name: this.props.singleName,
 		};
 	}
 
@@ -39,7 +41,7 @@ class Form extends Component {
 			this.setState(() => {
 				return {
 					score: this.state.score + 10,
-					messages: 'Correct Answer',
+					messages: 'Respuesta correcta!',
 				};
 			});
 		} else if (this.state.score === 0) {
@@ -52,7 +54,7 @@ class Form extends Component {
 			this.setState(() => {
 				return {
 					score: this.state.score - 10,
-					messages: 'Wrong Answer',
+					messages: 'Ups la respuesta es incorrecta!',
 				};
 			});
 		}
@@ -111,11 +113,7 @@ class Form extends Component {
 						<div className='game-title'>
 							<h1>JavaScript Interview Trainer</h1>
 						</div>
-						<div className='dark-mode'>
-							<button id='dark-mode-button'>
-								<i className='bi bi-brightness-high-fill'></i>
-							</button>
-						</div>
+						<div className='dark-mode'></div>
 						<div className='language-mode'>Language</div>
 					</div>
 					<div className='footer'>
@@ -128,10 +126,10 @@ class Form extends Component {
 						</div>
 					</div>
 					<div className='game-area'>
-						<div className='player-name'>{this.props.sendName}</div>
+						<div className='player-name'>{this.state.name}</div>
 						<div className='player-points'>
-							<p>
-								Points: <span>{this.state.score}</span>
+							<p className='acumulatedPoints'>
+								<span>{this.state.score}</span>
 							</p>
 						</div>
 						<div className='score'>score</div>
@@ -150,8 +148,8 @@ class Form extends Component {
 							<p id='currentCard'>{firstQuestion}</p>
 						</div>
 						<div className='messages'>
-							<p>
-								Messages: <span>{this.state.messages}</span>
+							<p className='textMessage'>
+								<span>{this.state.messages}</span>
 							</p>
 						</div>
 						<div className='buttons'>

@@ -1,6 +1,37 @@
-import { React, Component } from 'react';
+import { React, Component, useState, createContext } from 'react';
 import '../styles/styles.css';
-import Form from '../Form';
+import Form, { Player } from '../Form';
+import ReactSwitch from 'react-switch';
+
+export const ThemeContext = createContext(null);
+
+export function Switch(props) {
+	const singleUser = props.sendName;
+	const [theme, setTheme] = useState('light');
+	const toggleTheme = () => {
+		setTheme(curr => (curr === 'light' ? 'dark' : 'light'));
+	};
+
+	return (
+		<ThemeContext.Provider value={{ theme, setTheme }}>
+			<div className='Second-App' id={theme}>
+				<div className='mode-container'>
+					<label>{theme === 'light' ? 'Light Mode' : 'Dark Mode'}</label>
+					<ReactSwitch
+						className='react-switch'
+						onChange={toggleTheme}
+						checked={theme === 'dark'}
+						uncheckedIcon={false}
+						height={20}
+						width={40}
+						handleDiameter={20}
+					/>
+				</div>
+				<Form singleName={singleUser} />
+			</div>
+		</ThemeContext.Provider>
+	);
+}
 
 class StartView extends Component {
 	constructor(props) {
@@ -17,7 +48,9 @@ class StartView extends Component {
 		if (document.getElementById('nameUser').value.length > 3) {
 			return this.setState({ name: document.getElementById('nameUser').value, mode: 'form' });
 		} else {
-			document.getElementById('welcomeMessage').innerHTML = 'Invalid name, Please enter your name';
+			const newText = document.getElementById('welcomeMessage');
+			newText.innerHTML = 'Invalid name, Please enter your name';
+			newText.style.color = '#004E64';
 		}
 	}
 
@@ -26,16 +59,20 @@ class StartView extends Component {
 			return (
 				<>
 					<div className='userView'>
-						<h1 id='welcomeMessage'>Welcome, please insert your name</h1>
-						<div>
-							<input type='text' id='nameUser' />
-							<button
-								id='startButton'
-								onClick={() => {
-									this.handleSubmit();
-								}}>
-								Start
-							</button>
+						<div className='insideUser'>
+							<h1 id='welcomeMessage'>Welcome, please insert your name</h1>
+							<div>
+								<input type='text' id='nameUser' />
+								<div className='formControls'>
+									<button
+										id='startButtonMain'
+										onClick={() => {
+											this.handleSubmit();
+										}}>
+										Start
+									</button>
+								</div>
+							</div>
 						</div>
 					</div>
 				</>
@@ -43,7 +80,7 @@ class StartView extends Component {
 		} else {
 			return (
 				<>
-					<Form sendName={this.state.name} />
+					<Switch sendName={this.state.name} />
 				</>
 			);
 		}
