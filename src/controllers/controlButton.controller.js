@@ -19,15 +19,3 @@ export const enableButton = () => {
 	document.getElementById('thirdButton').disabled = false;
 	document.querySelector('.startButton').classList.add('hideMe');
 };
-
-export const textIn = () => {
-	document.getElementById('currentCard').classList.add('fade-in-text');
-
-	document.getElementById('currentCard').classList.remove('fade-out-text');
-};
-
-export const textOut = () => {
-	document.getElementById('currentCard').classList.remove('fade-in-text');
-
-	document.getElementById('currentCard').classList.add('fade-out-text');
-};

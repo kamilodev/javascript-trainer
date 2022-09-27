@@ -1,13 +1,19 @@
+:root {
+	--background-header: #efd81a;
+}
+
 /* Light Mode */
 
-:root {
-	--color-game-background: #fff;
+#light {
+	background-color: #fff;
+	color: #000;
 }
 
 /* Dark Mode */
 
-[data-theme='dark'] {
-	--color-game-background: #000;
+#dark {
+	background-color: #000;
+	color: #fff;
 }
 
 .bi-brightness-high-fill {
@@ -46,6 +52,10 @@ body {
 	grid-area: header;
 }
 
+#light .header {
+	background-color: var(--background-header);
+}
+
 .game-title {
 	grid-area: game-title;
 	display: flex;
@@ -59,7 +69,6 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background-color: #9a7676;
 }
 
 .language-mode {
@@ -67,7 +76,6 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background-color: #facccc;
 }
 
 .footer {
@@ -268,4 +276,16 @@ h5 {
 
 .hideMe {
 	visibility: hidden;
+}
+
+.userView {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+.nameUser {
+	margin: 1rem;
 }

@@ -17,21 +17,6 @@
 	</head>
 	<body>
 		<noscript>You need to enable JavaScript to run this app.</noscript>
-		<div class="light" id="root"></div>
-		<script>
-			const chk = document.getElementById('root');
-
-			chk.addEventListener('click', e => {
-				if (chk.classList.contains('light')) {
-					chk.classList.remove('light');
-					chk.setAttribute('data-theme', 'dark');
-				} else {
-					chk.classList.add('dark');
-					chk.classList.remove('dark');
-					chk.setAttribute('data-theme', 'light');
-				}
-				//chk.setAttribute('data-theme', 'dark');
-			});
-		</script>
+		<div id="root"></div>
 	</body>
 </html>
