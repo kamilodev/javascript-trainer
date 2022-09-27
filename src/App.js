@@ -56,6 +56,7 @@ class App extends Component {
 				};
 			});
 		}
+
 		this.nextQuestion();
 		console.log('Auxcards:', this.state.auxCards);
 	};
@@ -130,12 +131,24 @@ class App extends Component {
 				{console.log('Estado Actual ', this.state.cards)}
 				<div className='container'>
 					<div className='header'>
-						<div className='game-title'>Game title</div>
-						<div className='dark-mode'>Dark Mode</div>
+						<div className='game-title'>
+							<h1>JavaScript Interview Trainer</h1>
+						</div>
+						<div className='dark-mode'>
+							<button id='dark-mode-button'>
+								<i className='bi bi-brightness-high-fill'></i>
+							</button>
+						</div>
 						<div className='language-mode'>Language</div>
 					</div>
 					<div className='footer'>
-						<div className='made-love'>Made With Love</div>
+						<div className='made-love'>
+							<i className='bi bi-code'></i>
+							<h5 className='copy'>
+								Hecho con <i className='bi bi-heart-fill'></i> por Kamilo
+							</h5>
+							<i className='bi bi-code-slash'></i>
+						</div>
 					</div>
 					<div className='game-area'>
 						<div className='player-name'>Player Name</div>
@@ -146,12 +159,18 @@ class App extends Component {
 						</div>
 						<div className='score'>score</div>
 						<div className='lives'>
-							<div className='heart-1'>Heart 1</div>
-							<div className='heart-2'>Heart 2</div>
-							<div className='heart-3'>Heart 3</div>
+							<div className='heart-1'>
+								<i className='bi bi-suit-heart-fill'></i>
+							</div>
+							<div className='heart-2'>
+								<i className='bi bi-suit-heart-fill'></i>
+							</div>
+							<div className='heart-3'>
+								<i className='bi bi-suit-heart-fill'></i>
+							</div>
 						</div>
 						<div className='card-play'>
-							<p>{firstQuestion}</p>
+							<p id='currentCard'>{firstQuestion}</p>
 						</div>
 						<div className='messages'>
 							<p>

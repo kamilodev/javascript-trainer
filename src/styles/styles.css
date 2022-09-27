@@ -1,6 +1,24 @@
+/* Light Mode */
+
+:root {
+	--color-game-background: #fff;
+}
+
+/* Dark Mode */
+
+[data-theme='dark'] {
+	--color-game-background: #000;
+}
+
+.bi-brightness-high-fill {
+	font-size: 2rem;
+	cursor: pointer;
+}
+
 body {
 	margin: 0;
 	padding: 0;
+	font-family: 'Varela Round', sans-serif;
 }
 
 .container {
@@ -33,7 +51,7 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background-color: #e9adad;
+	background-color: var(--color-game-background);
 }
 
 .dark-mode {
@@ -60,14 +78,29 @@ body {
 	grid-auto-flow: row;
 	grid-template-areas: 'made-love';
 	grid-area: footer;
+	text-align: center;
+	align-self: end;
+}
+
+.bi-code-slash,
+.bi-code {
+	font-size: 1.5rem;
+	padding: 0.5rem;
+	color: white;
+}
+
+h5 {
+	font-size: 1rem;
+	color: white;
 }
 
 .made-love {
 	grid-area: made-love;
-	background-color: #eaae8e;
+	background-color: black;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	padding: 0;
 }
 
 .game-area {
@@ -120,9 +153,13 @@ body {
 	grid-area: lives;
 }
 
+.bi-suit-heart-fill {
+	font-size: 1.5rem;
+	color: red;
+}
+
 .heart-1 {
 	grid-area: heart-1;
-	background-color: rgb(206, 17, 17);
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -130,7 +167,6 @@ body {
 
 .heart-2 {
 	grid-area: heart-2;
-	background-color: rgb(238, 64, 64);
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -138,7 +174,6 @@ body {
 
 .heart-3 {
 	grid-area: heart-3;
-	background-color: rgb(243, 115, 115);
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -150,6 +185,11 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+}
+
+#currentCard {
+	font-family: 'Fira Code', monospace;
+	font-size: 1.5rem;
 }
 
 .messages {
