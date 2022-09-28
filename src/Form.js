@@ -3,8 +3,10 @@ import './styles/styles.css';
 import { cards } from './models/card.model';
 import { shuffleCards } from './controllers/suffleCards.controller';
 import { disableButton, enableButton } from './controllers/controlButton.controller';
-import ReactSwitch from 'react-switch';
+//import ReactSwitch from 'react-switch';
 import Code from './components/SyntaxComponent';
+//import './styles/prism.css';
+// import Prism from 'prismjs';
 
 class Form extends Component {
 	constructor(props) {
@@ -22,6 +24,7 @@ class Form extends Component {
 		this.setState({
 			cards: shuffleCards(this.state.cards),
 		});
+		//Prism.highlightAll();
 	}
 
 	checkAnswer = (answer, correctAnswer) => {
@@ -105,6 +108,7 @@ class Form extends Component {
 		let secondAnswer = this.state.cards[0].answers.answerB;
 		let thirdAnswer = this.state.cards[0].answers.answerC;
 		let correctAnswer = this.state.cards[0].correctAnswer;
+		console.log(typeof firstQuestion);
 
 		return (
 			<>
@@ -148,7 +152,7 @@ class Form extends Component {
 							</div>
 						</div>
 						<div className='card-play'>
-							<Code code={firstQuestion} language='javascript' />
+							<Code code={firstQuestion} />
 							{/* <p id='currentCard'>{firstQuestion}</p> */}
 						</div>
 						<div className='messages'>
@@ -195,7 +199,12 @@ class Form extends Component {
 									onClick={() => {
 										this.resetGame();
 									}}>
-									<svg width='180px' height='60px' viewBox='0 0 180 60' className='border'>
+									<svg
+										id='svg-button'
+										width='180px'
+										height='60px'
+										viewBox='0 0 180 60'
+										className='border'>
 										<polyline points='179,1 179,59 1,59 1,1 179,1' className='bg-line' />
 										<polyline points='179,1 179,59 1,59 1,1 179,1' className='hl-line' />
 									</svg>

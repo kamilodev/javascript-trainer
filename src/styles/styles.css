@@ -4,6 +4,16 @@
 	--white: #fff;
 	--black: #000;
 	--granate: #34252f;
+	--shadow-color: 0deg 0% 58%;
+
+	--shadow-elevation-high: -0.3px -0.2px 0.4px hsl(var(--shadow-color) / 0.27),
+		-1.4px -0.8px 1.8px -0.4px hsl(var(--shadow-color) / 0.26),
+		-2.5px -1.4px 3.1px -0.8px hsl(var(--shadow-color) / 0.26),
+		-4.2px -2.3px 5.2px -1.2px hsl(var(--shadow-color) / 0.25),
+		-6.8px -3.7px 8.4px -1.6px hsl(var(--shadow-color) / 0.25),
+		-10.7px -5.9px 13.3px -2px hsl(var(--shadow-color) / 0.24),
+		-16.4px -9px 20.3px -2.4px hsl(var(--shadow-color) / 0.23),
+		-24.3px -13.3px 30.1px -2.7px hsl(var(--shadow-color) / 0.23);
 }
 
 /* Light Mode */
@@ -36,6 +46,7 @@ body {
 }
 
 .container {
+	background-color: #f0f0f0;
 	height: 100vh;
 	display: grid;
 	text-align: center;
@@ -221,6 +232,7 @@ h5 {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	text-align: left;
 }
 
 #light .card-play {
@@ -467,12 +479,14 @@ label {
 	transition: 1s ease-in-out;
 }
 
-svg {
+#svg-button {
 	position: absolute;
 	left: 0;
-	top: 0;
+	right: 0;
+	bottom: 105px;
+	margin: auto;
 	fill: none;
-	stroke: #fff;
+	stroke: #004e64;
 	stroke-dasharray: 150 480;
 	stroke-dashoffset: 150;
 	transition: 1s ease-in-out;
@@ -483,7 +497,7 @@ svg {
 	background: var(--background-header);
 }
 
-.btn:hover svg {
+.btn:hover #svg-button {
 	stroke-dashoffset: -480;
 }
 
@@ -491,4 +505,15 @@ svg {
 	color: var(--granate);
 	font-size: 18px;
 	font-weight: 100;
+}
+
+pre {
+	display: flex !important;
+	justify-content: center;
+	align-items: center;
+	min-width: 50vw;
+	min-height: 35vh;
+	border: 0;
+	border-radius: 10px;
+	box-shadow: var(--shadow-elevation-high);
 }
