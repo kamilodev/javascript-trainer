@@ -17,6 +17,7 @@ class Form extends Component {
 			buttons: true,
 			auxCards: [],
 			name: this.props.singleName,
+			messages: '',
 		};
 	}
 
@@ -77,14 +78,16 @@ class Form extends Component {
 			});
 			console.log('Remanent: ', remanent);
 		} else {
-			this.setState(() => {
-				return {
-					messages: `Game Over, you have finished the game`,
-					buttons: false,
-				};
-			});
-			disableButton();
-			console.log('Despues del disable: ', this.state.cards);
+			setTimeout(() => {
+				this.setState(() => {
+					return {
+						messages: `${this.state.name} has finalizado el juego con un puntaje de ${this.state.score}`,
+						buttons: false,
+					};
+				});
+				disableButton();
+				console.log('Despues del disable: ', this.state.cards);
+			}, 1000);
 		}
 	};
 
@@ -96,6 +99,7 @@ class Form extends Component {
 				score: 0,
 				buttons: true,
 				auxCards: [],
+				messages: '',
 			};
 		});
 		enableButton();
@@ -119,7 +123,7 @@ class Form extends Component {
 							<h1>JavaScript Interview Trainer</h1>
 						</div>
 						<div className='dark-mode'></div>
-						<div className='language-mode'>Language</div>
+						<div className='language-mode'></div>
 					</div>
 					<div className='footer'>
 						<div className='made-love'>
@@ -139,7 +143,7 @@ class Form extends Component {
 								<span>{this.state.score}</span>
 							</p>
 						</div>
-						<div className='counter'>score</div>
+						<div className='counter'></div>
 						<div className='lives'>
 							<div className='heart-1'>
 								<i className='bi bi-suit-heart-fill'></i>

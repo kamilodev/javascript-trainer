@@ -133,4 +133,207 @@ export const cards = [
 		correctAnswer: 'function',
 		response: 'false',
 	},
+	{
+		question: `¿Qué imprime este código?
+
+      function getName() {
+         var name = "John";
+         function printName() {
+            console.log(name);
+         }
+         printName();
+      }
+      getName();
+      `,
+		answers: {
+			answerA: 'John',
+			answerB: 'Compile time error',
+			answerC: 'undefined',
+		},
+		correctAnswer: 'John',
+		response: 'false',
+	},
+	{
+		question: `¿Qué hace una sentencia return en un bucle 
+            forEach en un Array?
+      `,
+		answers: {
+			answerA: 'Nada',
+			answerB: 'Retorna el valor especificado',
+			answerC: 'Finaliza el bucle',
+		},
+		correctAnswer: 'Nada',
+		response: 'false',
+	},
+	{
+		question: `¿Qué retorna la siguiente función?
+
+      function resolveFast(x) {
+         return new Promise((resolve) => {
+            console.log(x)
+         });
+      }
+
+      async function mainTest() {
+         const x = resolveFast(10);
+         console.log(5);
+      }
+
+      mainTest();
+      `,
+		answers: {
+			answerA: '5, 10',
+			answerB: 'No imprime nada',
+			answerC: '10, 5',
+		},
+		correctAnswer: '10, 5',
+		response: 'false',
+	},
+	{
+		question: `¿Qué imprime este código?
+
+      function getName() {
+         var name = "John";
+         
+         function printName() {
+            console.log(name);
+         }
+         printName();
+      }
+      getName();
+      `,
+		answers: {
+			answerA: 'John',
+			answerB: 'Compile time error',
+			answerC: 'undefined',
+		},
+		correctAnswer: 'John',
+		response: 'false',
+	},
+	{
+		question: `¿Cuál expresión se usa para iterar sobre
+      objetos asíncronos?
+      `,
+		answers: {
+			answerA: 'if async then',
+			answerB: 'for await... of',
+			answerC: 'do while async',
+		},
+		correctAnswer: 'for await... of',
+		response: 'false',
+	},
+	{
+		question: `¿Qué imprime este código?
+
+      let i = 10;
+
+      for(; i < 12;){
+         console.log(++i);
+      }
+      `,
+		answers: {
+			answerA: 'lint error',
+			answerB: 'runtime error',
+			answerC: '11, 12',
+		},
+		correctAnswer: '11, 12',
+		response: 'false',
+	},
+	{
+		question: `¿Qué retorna esta función?
+
+      let scope = "global";
+
+      getScope = () => {
+         var scope = "local";
+         const inner = () => {
+            return scope;
+         }
+         
+         return inner;
+      }
+
+      getScope()()
+      `,
+		answers: {
+			answerA: 'global',
+			answerB: 'local',
+			answerC: 'undefined',
+		},
+		correctAnswer: 'local',
+		response: 'false',
+	},
+	{
+		question: `¿Qué valor retornará el array num[2][1]?
+
+      const num = [
+         ["a", "b", "c"],
+         ["d", "e", "f"],
+         ["g", "h", "i"],
+      ];
+      `,
+		answers: {
+			answerA: 'd',
+			answerB: 'h',
+			answerC: 'e',
+		},
+		correctAnswer: 'h',
+		response: 'false',
+	},
+	{
+		question: `¿Qué imprime este código?
+
+      let arr = [1, 2, 3];
+
+      arr.push(4);
+      arr.pop();
+      arr.slice(1,2);
+      arr.splice(1,2);
+
+      console.log(arr)
+      `,
+		answers: {
+			answerA: '[1]',
+			answerB: '[1,2]',
+			answerC: '[2,3]',
+		},
+		correctAnswer: '[1]',
+		response: 'false',
+	},
+	{
+		question: `¿Cuáles arrow functions en JavaScript
+      retornan un nuevo array?
+
+      A) map()
+      B) filter()
+      C) forEach()
+      D) find()
+      `,
+		answers: {
+			answerA: 'A y B',
+			answerB: 'A y D',
+			answerC: 'B y C',
+		},
+		correctAnswer: 'A y B',
+		response: 'false',
+	},
+	{
+		question: `¿Qué imprime este código?
+
+      const str = 'test1'
+
+      switch (str) {
+      case "test1":
+      case "test2":
+         console.log("At test2");
+}
+      `,
+		answers: {
+			answerA: 'At test2',
+			answerB: 'Nada',
+			answerC: 'Runtime Error',
+		},
+		correctAnswer: 'At test2',
+		response: 'false',
+	},
 ];

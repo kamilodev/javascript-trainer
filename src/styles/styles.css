@@ -61,6 +61,10 @@ body {
 		'footer';
 }
 
+#dark .container {
+	background-color: #939196;
+}
+
 .header {
 	display: grid;
 	grid-template-columns: 0.5fr 2fr 0.5fr;
@@ -75,12 +79,19 @@ body {
 	background-color: var(--background-header);
 }
 
+#dark .header {
+	background-color: var(--black);
+}
+
 .game-title {
 	grid-area: game-title;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background-color: var(--color-game-background);
+}
+
+#dark .game-title {
+	color: var(--background-header);
 }
 
 .dark-mode {
@@ -115,6 +126,10 @@ body {
 	align-self: end;
 }
 
+#dark .footer {
+	background-color: #939196;
+}
+
 .bi-code-slash,
 .bi-code {
 	font-size: 1.5rem;
@@ -125,6 +140,10 @@ body {
 h5 {
 	font-size: 1rem;
 	color: white;
+}
+
+#dark h5 {
+	color: var(--background-header);
 }
 
 .made-love {
@@ -153,6 +172,10 @@ h5 {
 	grid-area: game-area;
 }
 
+#dark .game-area {
+	background-color: #939196;
+}
+
 .player-name {
 	background-color: #21325e;
 	font-size: 1.3rem;
@@ -161,6 +184,10 @@ h5 {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+}
+
+#dark .player-name {
+	background-color: #939196;
 }
 
 .player-name-text {
@@ -175,10 +202,18 @@ h5 {
 	align-items: center;
 }
 
+#dark .player-points {
+	background-color: #939196;
+}
+
 .acumulatedPoints {
 	font-size: 2rem;
 	font-style: italic;
 	color: #34252f;
+}
+
+#dark .acumulatedPoints {
+	color: white;
 }
 
 .counter {
@@ -187,6 +222,10 @@ h5 {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+}
+
+#dark .counter {
+	background-color: #939196;
 }
 
 .lives {
@@ -200,9 +239,17 @@ h5 {
 	grid-area: lives;
 }
 
+#dark .lives {
+	background-color: #939196;
+}
+
 .bi-suit-heart-fill {
 	font-size: 1.5rem;
 	color: red;
+}
+
+#dark .bi-suit-heart-fill {
+	color: black;
 }
 
 .heart-1 {
@@ -228,7 +275,6 @@ h5 {
 
 .card-play {
 	grid-area: card-play;
-	background-color: rgb(151, 182, 207);
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -237,6 +283,10 @@ h5 {
 
 #light .card-play {
 	background-color: var(--white);
+}
+
+#dark .card-play {
+	background-color: var(--black);
 }
 
 #currentCard {
@@ -269,6 +319,10 @@ h5 {
 	grid-area: buttons;
 }
 
+#dark .buttons {
+	background-color: #939196;
+}
+
 .option-A {
 	grid-area: option-A;
 	display: flex;
@@ -299,6 +353,10 @@ h5 {
 	grid-auto-flow: row;
 	grid-template-areas: '. button-control .';
 	grid-area: start-control;
+}
+
+#dark .start-control {
+	background-color: #939196;
 }
 
 .button-control {
@@ -416,6 +474,11 @@ label {
 	border-radius: 10px;
 }
 
+#dark .glow-on-hover {
+	color: #111;
+	background: var(--background-header);
+}
+
 .glow-on-hover:before {
 	content: '';
 	background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
@@ -441,6 +504,10 @@ label {
 	background: transparent;
 }
 
+#dark .glow-on-hover:active:after {
+	background: transparent;
+}
+
 .glow-on-hover:hover:before {
 	opacity: 1;
 }
@@ -455,6 +522,11 @@ label {
 	left: 0;
 	top: 0;
 	border-radius: 10px;
+}
+
+#dark .glow-on-hover:after {
+	background: var(--background-header);
+	color: #111;
 }
 
 @keyframes glowing {
@@ -516,4 +588,14 @@ pre {
 	border: 0;
 	border-radius: 10px;
 	box-shadow: var(--shadow-elevation-high);
+}
+
+#dark pre {
+	background-color: #3c3b3b !important;
+	color: #fff;
+	box-shadow: none;
+}
+
+#dark .hljs-function {
+	color: #ffd3da !important;
 }
