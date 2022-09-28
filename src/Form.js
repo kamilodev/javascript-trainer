@@ -4,6 +4,7 @@ import { cards } from './models/card.model';
 import { shuffleCards } from './controllers/suffleCards.controller';
 import { disableButton, enableButton } from './controllers/controlButton.controller';
 import ReactSwitch from 'react-switch';
+import Code from './components/SyntaxComponent';
 
 class Form extends Component {
 	constructor(props) {
@@ -147,9 +148,7 @@ class Form extends Component {
 							</div>
 						</div>
 						<div className='card-play'>
-							<pre>
-								<code class='language-javascript'>{firstQuestion}</code>
-							</pre>
+							<Code code={firstQuestion} language='javascript' />
 							{/* <p id='currentCard'>{firstQuestion}</p> */}
 						</div>
 						<div className='messages'>
@@ -196,9 +195,9 @@ class Form extends Component {
 									onClick={() => {
 										this.resetGame();
 									}}>
-									<svg width='180px' height='60px' viewBox='0 0 180 60' class='border'>
-										<polyline points='179,1 179,59 1,59 1,1 179,1' class='bg-line' />
-										<polyline points='179,1 179,59 1,59 1,1 179,1' class='hl-line' />
+									<svg width='180px' height='60px' viewBox='0 0 180 60' className='border'>
+										<polyline points='179,1 179,59 1,59 1,1 179,1' className='bg-line' />
+										<polyline points='179,1 179,59 1,59 1,1 179,1' className='hl-line' />
 									</svg>
 									<span>Jugar Otra Vez!</span>
 								</button>

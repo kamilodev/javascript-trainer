@@ -1,6 +1,14 @@
 export const cards = [
 	{
-		question: 'Que es JavaScript',
+		question: `const App = props => {
+  return (
+    <div>
+      <h1> Prism JS </h1>
+      <div>Awesome Syntax Highlighter</div>
+    </div>
+  );
+};
+`,
 		answers: {
 			answerA: 'Es un lenguaje de programación',
 			answerB: 'Es un lenguaje de marcado',
