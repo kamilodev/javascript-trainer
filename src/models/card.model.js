@@ -10,7 +10,7 @@ export const cards = [
 		response: 'false',
 	},
 	{
-		question: 'Que es Node',
+		question: 'const a = b',
 		answers: {
 			answerA: 'Es el lado del frontend',
 			answerB: 'Es un framework del backend',

@@ -147,7 +147,10 @@ class Form extends Component {
 							</div>
 						</div>
 						<div className='card-play'>
-							<p id='currentCard'>{firstQuestion}</p>
+							<pre>
+								<code class='language-javascript'>{firstQuestion}</code>
+							</pre>
+							{/* <p id='currentCard'>{firstQuestion}</p> */}
 						</div>
 						<div className='messages'>
 							<p className='textMessage'>
