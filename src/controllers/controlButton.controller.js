@@ -6,7 +6,7 @@ export const disableButton = () => {
 	document.getElementById('firstButton').disabled = true;
 	document.getElementById('secondButton').disabled = true;
 	document.getElementById('thirdButton').disabled = true;
-	document.querySelector('.startButton').classList.remove('hideMe');
+	document.querySelector('.btn').classList.remove('hideMe');
 };
 
 export const enableButton = () => {
@@ -17,5 +17,5 @@ export const enableButton = () => {
 	document.getElementById('firstButton').disabled = false;
 	document.getElementById('secondButton').disabled = false;
 	document.getElementById('thirdButton').disabled = false;
-	document.querySelector('.startButton').classList.add('hideMe');
+	document.querySelector('.btn').classList.add('hideMe');
 };

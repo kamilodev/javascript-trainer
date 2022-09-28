@@ -126,13 +126,15 @@ class Form extends Component {
 						</div>
 					</div>
 					<div className='game-area'>
-						<div className='player-name'>{this.state.name}</div>
+						<div className='player-name'>
+							<p className='player-name-text'>{this.state.name}</p>
+						</div>
 						<div className='player-points'>
 							<p className='acumulatedPoints'>
 								<span>{this.state.score}</span>
 							</p>
 						</div>
-						<div className='score'>score</div>
+						<div className='counter'>score</div>
 						<div className='lives'>
 							<div className='heart-1'>
 								<i className='bi bi-suit-heart-fill'></i>
@@ -155,7 +157,7 @@ class Form extends Component {
 						<div className='buttons'>
 							<div className='option-A'>
 								<button
-									className='firstButton'
+									className='glow-on-hover'
 									id='firstButton'
 									onClick={() => {
 										this.checkAnswer(firstAnswer, correctAnswer);
@@ -165,7 +167,7 @@ class Form extends Component {
 							</div>
 							<div className='option-B'>
 								<button
-									className='secondButton'
+									className='glow-on-hover'
 									id='secondButton'
 									onClick={() => {
 										this.checkAnswer(secondAnswer, correctAnswer);
@@ -175,7 +177,7 @@ class Form extends Component {
 							</div>
 							<div className='option-C'>
 								<button
-									className='thirdButton'
+									className='glow-on-hover'
 									id='thirdButton'
 									onClick={() => {
 										this.checkAnswer(thirdAnswer, correctAnswer);
@@ -187,11 +189,15 @@ class Form extends Component {
 						<div className='start-control'>
 							<div className='button-control' id='startButton'>
 								<button
-									className='startButton hideMe'
+									className='btn hideMe'
 									onClick={() => {
 										this.resetGame();
 									}}>
-									Jugar Otra Vez!
+									<svg width='180px' height='60px' viewBox='0 0 180 60' class='border'>
+										<polyline points='179,1 179,59 1,59 1,1 179,1' class='bg-line' />
+										<polyline points='179,1 179,59 1,59 1,1 179,1' class='hl-line' />
+									</svg>
+									<span>Jugar Otra Vez!</span>
 								</button>
 							</div>
 						</div>

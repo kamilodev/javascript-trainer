@@ -92,6 +92,7 @@ body {
 }
 
 .footer {
+	background-color: #f0f0f0;
 	display: grid;
 	grid-template-columns: 1fr;
 	grid-template-rows: 1fr;
@@ -121,10 +122,11 @@ h5 {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	padding: 0;
+	margin-top: 1rem;
 }
 
 .game-area {
+	background-color: #f0f0f0;
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-template-rows: 0.3fr 0.3fr 2fr 0.2fr 0.3fr 0.2fr;
@@ -141,6 +143,7 @@ h5 {
 }
 
 .player-name {
+	background-color: #21325e;
 	font-size: 1.3rem;
 	font-style: italic;
 	grid-area: player-name;
@@ -149,7 +152,12 @@ h5 {
 	align-items: center;
 }
 
+.player-name-text {
+	color: white;
+}
+
 .player-points {
+	background-color: #f0f0f0;
 	grid-area: player-points;
 	display: flex;
 	justify-content: center;
@@ -163,14 +171,15 @@ h5 {
 }
 
 .counter {
+	background-color: #f0f0f0;
 	grid-area: counter;
-	background-color: rgb(182, 247, 209);
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
 
 .lives {
+	background-color: #f0f0f0;
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-template-rows: 1fr;
@@ -237,8 +246,9 @@ h5 {
 }
 
 .buttons {
+	background-color: #f0f0f0;
 	display: grid;
-	margin: 1rem 0;
+	margin: 1rem;
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-template-rows: 1fr;
 	gap: 0px 0px;
@@ -269,6 +279,7 @@ h5 {
 }
 
 .start-control {
+	background-color: #f0f0f0;
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-template-rows: 1fr;
@@ -286,7 +297,7 @@ h5 {
 	justify-self: center;
 }
 
-.firstButton,
+/* .firstButton,
 .secondButton,
 .thirdButton {
 	cursor: pointer;
@@ -294,7 +305,7 @@ h5 {
 	height: 100%;
 	border: 0;
 	border-radius: 10px;
-}
+} */
 
 .startButton {
 	background-color: #92dce5;
@@ -378,4 +389,106 @@ h5 {
 
 label {
 	padding: 1rem;
+}
+
+.glow-on-hover {
+	width: 250px;
+	height: 80px;
+	border: none;
+	outline: none;
+	color: #fff;
+	background: #111;
+	cursor: pointer;
+	position: relative;
+	z-index: 0;
+	border-radius: 10px;
+}
+
+.glow-on-hover:before {
+	content: '';
+	background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+	position: absolute;
+	top: -2px;
+	left: -2px;
+	background-size: 400%;
+	z-index: -1;
+	filter: blur(5px);
+	width: calc(100% + 4px);
+	height: calc(100% + 4px);
+	animation: glowing 20s linear infinite;
+	opacity: 0;
+	transition: opacity 0.3s ease-in-out;
+	border-radius: 10px;
+}
+
+.glow-on-hover:active {
+	color: #000;
+}
+
+.glow-on-hover:active:after {
+	background: transparent;
+}
+
+.glow-on-hover:hover:before {
+	opacity: 1;
+}
+
+.glow-on-hover:after {
+	z-index: -1;
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: #111;
+	left: 0;
+	top: 0;
+	border-radius: 10px;
+}
+
+@keyframes glowing {
+	0% {
+		background-position: 0 0;
+	}
+	50% {
+		background-position: 400% 0;
+	}
+	100% {
+		background-position: 0 0;
+	}
+}
+
+.btn {
+	width: 150px;
+	height: 40px;
+	cursor: pointer;
+	background: transparent;
+	border: 1px solid var(--black);
+	outline: none;
+	transition: 1s ease-in-out;
+}
+
+svg {
+	position: absolute;
+	left: 0;
+	top: 0;
+	fill: none;
+	stroke: #fff;
+	stroke-dasharray: 150 480;
+	stroke-dashoffset: 150;
+	transition: 1s ease-in-out;
+}
+
+.btn:hover {
+	transition: 1s ease-in-out;
+	background: var(--background-header);
+}
+
+.btn:hover svg {
+	stroke-dashoffset: -480;
+}
+
+.btn span {
+	color: var(--granate);
+	font-size: 18px;
+	font-weight: 100;
 }
