@@ -14,10 +14,10 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-### `npm test`
+### `App deployed in Heroku`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+You can click on the following link where the application is deployed on a heroku server.\
+The App is still under development - [JavaScript Trainer](https://javascript-trainer.herokuapp.com/) for more information.
 
 ### `npm run build`
 
