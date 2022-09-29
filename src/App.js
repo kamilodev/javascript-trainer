@@ -1,8 +1,7 @@
-import Form from './Form';
-import { React, Component, useState, createContext } from 'react';
-import StartView, { checkName } from './views/start.view';
+import { React } from 'react';
+import StartView from './views/start.view';
 
-function App(props) {
+function App() {
 	return (
 		<div className='App'>
 			<StartView />

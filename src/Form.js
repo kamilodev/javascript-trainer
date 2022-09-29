@@ -3,10 +3,7 @@ import './styles/styles.css';
 import { cards } from './models/card.model';
 import { shuffleCards } from './controllers/suffleCards.controller';
 import { disableButton, enableButton } from './controllers/controlButton.controller';
-//import ReactSwitch from 'react-switch';
 import Code from './components/SyntaxComponent';
-//import './styles/prism.css';
-// import Prism from 'prismjs';
 
 class Form extends Component {
 	constructor(props) {
@@ -26,7 +23,6 @@ class Form extends Component {
 		this.setState({
 			cards: shuffleCards(this.state.cards),
 		});
-		//Prism.highlightAll();
 	}
 
 	checkAnswer = (answer, correctAnswer) => {
@@ -50,7 +46,6 @@ class Form extends Component {
 					messages: 'Respuesta correcta!',
 				};
 			});
-			console.log(this.state.lives);
 		} else if (this.state.score === 0) {
 			this.setState(() => {
 				return {
@@ -58,7 +53,6 @@ class Form extends Component {
 					lives: this.state.lives - 1,
 				};
 			});
-			console.log(this.state.lives);
 		} else {
 			this.setState(() => {
 				return {
@@ -67,20 +61,9 @@ class Form extends Component {
 					lives: this.state.lives - 1,
 				};
 			});
-			console.log(this.state.lives);
 		}
 
-		/* if (this.state.lives === 1) {
-			disableButton();
-			this.setState(() => {
-				return {
-					messages: 'Game Over, no tienes mas vidas',
-				};
-			});
-		} */
-
 		this.nextQuestion();
-		console.log('Auxcards:', this.state.auxCards);
 	};
 
 	nextQuestion = () => {
@@ -91,7 +74,6 @@ class Form extends Component {
 					cards: remanent,
 				};
 			});
-			console.log('Remanent: ', remanent);
 		} else {
 			setTimeout(() => {
 				this.setState(() => {
@@ -101,13 +83,11 @@ class Form extends Component {
 					};
 				});
 				disableButton();
-				console.log('Despues del disable: ', this.state.cards);
 			}, 1000);
 		}
 	};
 
 	resetGame = () => {
-		console.log('antes de tarjetilla', this.state.cards);
 		this.setState(() => {
 			return {
 				cards: shuffleCards(this.state.auxCards),
@@ -118,7 +98,6 @@ class Form extends Component {
 			};
 		});
 		enableButton();
-		console.log('Despues del reset: ', this.state.cards);
 	};
 
 	render() {
@@ -127,11 +106,9 @@ class Form extends Component {
 		let secondAnswer = this.state.cards[0].answers.answerB;
 		let thirdAnswer = this.state.cards[0].answers.answerC;
 		let correctAnswer = this.state.cards[0].correctAnswer;
-		console.log(typeof firstQuestion);
 
 		return (
 			<>
-				{console.log('Estado Actual ', this.state.cards)}
 				<div className='container'>
 					<div className='header'>
 						<div className='game-title'>
@@ -174,7 +151,6 @@ class Form extends Component {
 						</div>
 						<div className='card-play'>
 							<Code code={firstQuestion} />
-							{/* <p id='currentCard'>{firstQuestion}</p> */}
 						</div>
 						<div className='messages'>
 							<p className='textMessage'>
