@@ -1,5 +1,5 @@
 :root {
-	--background-header: #efd81a;
+	--background-header: #f7df1e;
 	--ligth-white: #f5f5f5;
 	--white: #fff;
 	--black: #000;
@@ -51,7 +51,7 @@ body {
 	display: grid;
 	text-align: center;
 	grid-template-columns: 1fr;
-	grid-template-rows: 0.4fr 2fr 0.2fr;
+	grid-template-rows: 0.5fr 2fr 0.5fr; /* 0.4 2 0.2 */
 	grid-auto-columns: 1fr;
 	gap: 0px 0px;
 	grid-auto-flow: row;
@@ -497,7 +497,7 @@ label {
 }
 
 .glow-on-hover:active {
-	color: #000;
+	color: white;
 }
 
 .glow-on-hover:active:after {
@@ -562,6 +562,10 @@ label {
 	stroke-dasharray: 150 480;
 	stroke-dashoffset: 150;
 	transition: 1s ease-in-out;
+}
+
+#dark #svg-button {
+	stroke: white;
 }
 
 .btn:hover {

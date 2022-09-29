@@ -123,7 +123,9 @@ class Form extends Component {
 							<h1>JavaScript Interview Trainer</h1>
 						</div>
 						<div className='dark-mode'></div>
-						<div className='language-mode'></div>
+						<div className='language-mode'>
+							<img src={this.props.logo} alt='javascript-logo' width='100' height='100' />
+						</div>
 					</div>
 					<div className='footer'>
 						<div className='made-love'>

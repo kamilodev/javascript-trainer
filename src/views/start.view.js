@@ -12,6 +12,13 @@ export function Switch(props) {
 		setTheme(curr => (curr === 'light' ? 'dark' : 'light'));
 	};
 
+	let image = '';
+	if (theme === 'light') {
+		image = 'images/javascript-logo.png';
+	} else {
+		image = 'images/javascript-logo-dark.png';
+	}
+
 	return (
 		<ThemeContext.Provider value={{ theme, setTheme }}>
 			<div className='Second-App' id={theme}>
@@ -27,7 +34,7 @@ export function Switch(props) {
 						handleDiameter={20}
 					/>
 				</div>
-				<Form singleName={singleUser} />
+				<Form singleName={singleUser} logo={image} />
 			</div>
 		</ThemeContext.Provider>
 	);
