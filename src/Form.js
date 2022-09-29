@@ -70,14 +70,14 @@ class Form extends Component {
 			console.log(this.state.lives);
 		}
 
-		if (this.state.lives === 1) {
+		/* if (this.state.lives === 1) {
 			disableButton();
 			this.setState(() => {
 				return {
 					messages: 'Game Over, no tienes mas vidas',
 				};
 			});
-		}
+		} */
 
 		this.nextQuestion();
 		console.log('Auxcards:', this.state.auxCards);
@@ -137,8 +137,8 @@ class Form extends Component {
 						<div className='game-title'>
 							<h1>JavaScript Interview Trainer</h1>
 						</div>
-						<div className='dark-mode'></div>
-						<div className='language-mode'>
+						<div className='dark-mode-area'></div>
+						<div className='logo-area'>
 							<img src={this.props.logo} alt='javascript-logo' width='100' height='100' />
 						</div>
 					</div>

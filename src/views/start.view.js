@@ -23,7 +23,7 @@ export function Switch(props) {
 		<ThemeContext.Provider value={{ theme, setTheme }}>
 			<div className='Second-App' id={theme}>
 				<div className='mode-container'>
-					<label>{theme === 'light' ? 'Light Mode' : 'Dark Mode'}</label>
+					<label id='label-mode'>{theme === 'light' ? 'Light Mode' : 'Dark Mode'}</label>
 					<ReactSwitch
 						className='react-switch'
 						onChange={toggleTheme}
