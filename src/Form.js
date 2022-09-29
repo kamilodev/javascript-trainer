@@ -18,6 +18,7 @@ class Form extends Component {
 			auxCards: [],
 			name: this.props.singleName,
 			messages: '',
+			lives: 3,
 		};
 	}
 
@@ -49,17 +50,31 @@ class Form extends Component {
 					messages: 'Respuesta correcta!',
 				};
 			});
+			console.log(this.state.lives);
 		} else if (this.state.score === 0) {
 			this.setState(() => {
 				return {
 					score: 0,
+					lives: this.state.lives - 1,
 				};
 			});
+			console.log(this.state.lives);
 		} else {
 			this.setState(() => {
 				return {
 					score: this.state.score - 10,
 					messages: 'Ups la respuesta es incorrecta!',
+					lives: this.state.lives - 1,
+				};
+			});
+			console.log(this.state.lives);
+		}
+
+		if (this.state.lives === 1) {
+			disableButton();
+			this.setState(() => {
+				return {
+					messages: 'Game Over, no tienes mas vidas',
 				};
 			});
 		}
