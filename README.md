@@ -1,18 +1,26 @@
+<center>
+
 ![Logo](https://github.com/ProKav/javascript-trainer/raw/main/public/images/JavaScript-Trainer.png)
 
-# JavaScript Interview Trainer
+</center>
+
+<div style="text-align: justify">
 
 Este es un proyecto desarrollado para reforzar conceptos del lenguaje JavaScript.
+
 La aplicación permite responder preguntas tipo test que pueden aparecer en **entrevistas técnicas** durante la búsqueda de empleo como desarrollador, o programador.
+
 El propósito es aportar a la comunidad de [Open Bootcamp](https://www.google.com 'Open Bootcamp') y a todos aquellos cuyo enfoque es ingresar al mercado laboral.
 
-## Demo
+</div>
+
+## :rocket: Demo
 
 La aplicación esta desplegada en un servidor de Heroku, puedes visitarla haciendo click en el siguiente enlace.
 
 https://javascript-trainer.herokuapp.com/
 
-## Run Locally
+## :computer: Run Locally
 
 Clone the project
 
@@ -38,7 +46,7 @@ Start the server
   npm run start
 ```
 
-## Features
+## :book: Features
 
 -   Light/dark mode toggle
 -   Live previews
@@ -46,18 +54,14 @@ Start the server
 -   Responsive mode
 -   Syntax Highlighted
 
-## Lessons Learned
+## :bulb: Lessons Learned
 
 -   Basic concepts of JavaScript
 -   OOP
 -   Functional programming
 -   Console test
 
-## Optimizations
-
-What optimizations did you make in your code? E.g. refactors, performance improvements, accessibility
-
-## Tech Stack
+## :battery: Tech Stack
 
 _HTML_
 
@@ -67,7 +71,7 @@ _JavaScript_
 
 _React_
 
-## Dependencies
+## :key: Dependencies
 
 _PrismJs_
 
@@ -75,7 +79,7 @@ _React Syntax Highligthter_
 
 _React Switch_
 
-## Developed
+## :heavy_check_mark: Developed
 
 -   Initial website where you must enter a name
 
@@ -91,7 +95,7 @@ _React Switch_
 
 -   Option to start game again
 
-## Under development
+## :heavy_multiplication_x: Under development
 
 -   Complete validation of the user field
 
@@ -103,16 +107,6 @@ _React Switch_
 
 -   Countdown for each question
 
-## Badges
-
-[![MIT license](https://img.shields.io/badge/License-MIT-green.svg?color=purple&style=for-the-badge)](https://github.com/ProKav/javascript-trainer)
-
-[![GitHub forks](https://img.shields.io/github/forks/ProKav/javascript-trainer?style=for-the-badge)](https://github.com/ProKav/javascript-trainer/network)
-
-[![GitHub stars](https://img.shields.io/github/stars/ProKav/javascript-trainer?color=orange&style=for-the-badge)](https://github.com/ProKav/javascript-trainer/stargazers)
-
-[![GitHub issues](https://img.shields.io/github/issues/ProKav/javascript-trainer?color=red&style=for-the-badge)](https://github.com/ProKav/javascript-trainer/issues)
-
-## Authors
+## :sunglasses: Authors
 
 -   [@ProKav](https://github.com/ProKav)
