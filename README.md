@@ -1,70 +1,118 @@
-# Getting Started with Create React App
+![Logo](https://github.com/ProKav/javascript-trainer/raw/main/public/images/JavaScript-Trainer.png)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# JavaScript Interview Trainer
 
-## Available Scripts
+Este es un proyecto desarrollado para reforzar conceptos del lenguaje JavaScript.
+La aplicación permite responder preguntas tipo test que pueden aparecer en **entrevistas técnicas** durante la búsqueda de empleo como desarrollador, o programador.
+El propósito es aportar a la comunidad de [Open Bootcamp](https://www.google.com 'Open Bootcamp') y a todos aquellos cuyo enfoque es ingresar al mercado laboral.
 
-In the project directory, you can run:
+## Demo
 
-### `npm start`
+La aplicación esta desplegada en un servidor de Heroku, puedes visitarla haciendo click en el siguiente enlace.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+https://javascript-trainer.herokuapp.com/
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Run Locally
 
-### `App deployed in Heroku`
+Clone the project
 
-You can click on the following link where the application is deployed on a heroku server.\
-The App is still under development - [JavaScript Trainer](https://javascript-trainer.herokuapp.com/) for more information.
+```bash
+  git clone https://github.com/ProKav/javascript-trainer.git
+```
 
-### `npm run build`
+Go to the project directory
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+  cd javascript-trainer
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Install dependencies
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+  npm install
+```
 
-### `npm run eject`
+Start the server
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```bash
+  npm run start
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Features
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+-   Light/dark mode toggle
+-   Live previews
+-   Fullscreen mode
+-   Responsive mode
+-   Syntax Highlighted
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Lessons Learned
 
-## Learn More
+-   Basic concepts of JavaScript
+-   OOP
+-   Functional programming
+-   Console test
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Optimizations
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+What optimizations did you make in your code? E.g. refactors, performance improvements, accessibility
 
-### Code Splitting
+## Tech Stack
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+_HTML_
 
-### Analyzing the Bundle Size
+_CSS_
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+_JavaScript_
 
-### Making a Progressive Web App
+_React_
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Dependencies
 
-### Advanced Configuration
+_PrismJs_
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+_React Syntax Highligthter_
 
-### Deployment
+_React Switch_
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Developed
 
-### `npm run build` fails to minify
+-   Initial website where you must enter a name
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+-   Random cards with three possible answers. Only one is correct
+
+-   Possibility to add more cards
+
+-   Dark and light mode
+
+-   Responsive website
+
+-   10 points for correct answer, -10 for wrong answer
+
+-   Option to start game again
+
+## Under development
+
+-   Complete validation of the user field
+
+-   Three initial lives, each wrong answer takes away one life
+
+-   Backend implementation to store questions and answers in a database, instead of a JSON file.
+
+-   Web available in English and Spanish
+
+-   Countdown for each question
+
+## Badges
+
+[![MIT license](https://img.shields.io/badge/License-MIT-green.svg?color=purple&style=for-the-badge)](https://github.com/ProKav/javascript-trainer)
+
+[![GitHub forks](https://img.shields.io/github/forks/ProKav/javascript-trainer?style=for-the-badge)](https://github.com/ProKav/javascript-trainer/network)
+
+[![GitHub stars](https://img.shields.io/github/stars/ProKav/javascript-trainer?color=orange&style=for-the-badge)](https://github.com/ProKav/javascript-trainer/stargazers)
+
+[![GitHub issues](https://img.shields.io/github/issues/ProKav/javascript-trainer?color=red&style=for-the-badge)](https://github.com/ProKav/javascript-trainer/issues)
+
+## Authors
+
+-   [@ProKav](https://github.com/ProKav)
